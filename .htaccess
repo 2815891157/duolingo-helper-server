@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^user/(register|login|info|logout)$ auth.php?action=$1 [L,QSA]
+RewriteRule ^server$ api.php?action=server [L,QSA]
+RewriteRule ^request$ api.php?action=request [L,QSA]
+RewriteRule ^alpha/server$ api.php?action=server [L,QSA]
+RewriteRule ^alpha/request$ api.php?action=request [L,QSA]
