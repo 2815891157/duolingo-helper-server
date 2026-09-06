@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "duolingo-helper",
+  "main": "src/index.js",
+  "compatibility_date": "2025-08-01",
+  "account_id": "7fa001aa3755c6e95ee102aa1e77e952",
+  "workers_dev": true,
+  "kv_namespaces": [
+    { "binding": "DATA", "id": "413104db336a4a2080e9a0f577a0ced9" }
+  ]
+}
