@@ -5,18 +5,18 @@
 // @author       anonymousHackerIV
 // @match        *://*.duolingo.com/*
 // @match        *://*.duolingo.cn/*
-// @match        *://duolingo-helper.getpan.workers.dev/*
+// @match        *://Ai9288.pythonanywhere.com/*
 // @require      https://cdn.jsdelivr.net/npm/@intrastellar/squircle@0.5.2/squircle.js
 // @require      https://cdn.jsdelivr.net/npm/@intrastellar/numbers@0.1.0/dist/index.js
-// @connect      duolingo-helper.getpan.workers.dev
+// @connect      Ai9288.pythonanywhere.com
 // @connect      duolingo.com
 // @connect      www.duolingo.com
 // @connect      api.duolingo.com
 // @connect      stories.duolingo.com
 // @connect      goals-api.duolingo.com
 // @connect      cdn.jsdelivr.net
-// @downloadURL  https://duolingo-helper.getpan.workers.dev/DuolingoHelper.user.js
-// @updateURL    https://duolingo-helper.getpan.workers.dev/DuolingoHelper.user.js
+// @downloadURL  https://Ai9288.pythonanywhere.com/DuolingoHelper.user.js
+// @updateURL    https://Ai9288.pythonanywhere.com/DuolingoHelper.user.js
 // @grant        GM_log
 // @grant        GM_cookie
 // @grant        GM_setValue
@@ -32,10 +32,10 @@ const STORAGE_SESSION_VERSION = "1";
 const VERSION_NAME = "1.1.1";
 const VERSION_FULL = "1.1.1";
 const VERSION_FORMAL = "1.1.1";
-let serverURL = "https://duolingo-helper.getpan.workers.dev";
-let apiURL = "https://duolingo-helper.getpan.workers.dev";
-let autoServerURL = "https://duolingo-helper.getpan.workers.dev";
-const LOGIN_PAGE_URL = "https://duolingo-helper.getpan.workers.dev";
+let serverURL = "https://Ai9288.pythonanywhere.com";
+let apiURL = "https://Ai9288.pythonanywhere.com";
+let autoServerURL = "https://Ai9288.pythonanywhere.com";
+const LOGIN_PAGE_URL = "https://Ai9288.pythonanywhere.com";
 const greasyfork = true;
 const alpha = false;
 
@@ -312,7 +312,7 @@ const systemText = {
             connectionErrorTitle: "连接错误",
             connectionErrorBody: "无法连接到服务器 请稍后再试，加入我们的 QQ : 1014139027 以寻求支持",
             updateRequiredTitle: "需要更新",
-            updateRequiredBody: "你当前的 DuolingoHelper 版本已过时，部分功能可能无法使用。请<a href='https://duolingo-helper.getpan.workers.dev/DuolingoHelper.user.js' target='_blank' class='DLP_Link_Style_1'>更新脚本</a>。",
+            updateRequiredBody: "你当前的 DuolingoHelper 版本已过时，部分功能可能无法使用。请<a href='https://Ai9288.pythonanywhere.com/DuolingoHelper.user.js' target='_blank' class='DLP_Link_Style_1'>更新脚本</a>。",
             multipleScriptsTitle: "检测到多个脚本",
             multipleScriptsBody: "检测到页面中加载了多个 更好的多邻国 脚本实例。请禁用多余的脚本以避免冲突。",
             pinLimitReachedTitle: "已达到置顶上限",
@@ -360,7 +360,7 @@ const systemText = {
             active: "已激活",
             inactive: "未激活",
             lengthDays: "{length} 天{plural}",
-            maximumLengthNotice: "连续天数保护最长支持 {maximumLength} 天{plural}。<a href='https://duolingo-helper.getpan.workers.dev' target='_blank' class='DLP_Link_Style_1'>捐赠</a>可获得更长期保护。",
+            maximumLengthNotice: "连续天数保护最长支持 {maximumLength} 天{plural}。<a href='https://Ai9288.pythonanywhere.com' target='_blank' class='DLP_Link_Style_1'>捐赠</a>可获得更长期保护。",
             streakProtector: "连续天数保护",
             leagueProtector: "排行榜保护",
             protecting: "正在保护：",
@@ -371,7 +371,7 @@ const systemText = {
             betaNotice: "此功能尚在测试中",
             streakDescription: "连续天数保护通过在服务器上完成课程来延长你的连续天数。",
             leagueDescription: "排行榜保护通过在服务器上完成课程来保护你的排行榜位置。",
-            leagueLimitsNotice: "你当前仅有畅快模式和标准模式，最长 0 天保护。<a href='https://duolingo-helper.getpan.workers.dev' target='_blank' class='DLP_Link_Style_1'>捐赠</a>可解锁激进模式和更长期保护。",
+            leagueLimitsNotice: "你当前仅有畅快模式和标准模式，最长 0 天保护。<a href='https://Ai9288.pythonanywhere.com' target='_blank' class='DLP_Link_Style_1'>捐赠</a>可解锁激进模式和更长期保护。",
             chill: "畅快",
             zeroDays: "0 天",
             learnMore: "了解更多"
@@ -2278,8 +2278,8 @@ function One() {
                         // 自动打开网站激活 cookie，只触发一次
                         if (!window._dhl_challengeNotified) {
                             window._dhl_challengeNotified = true;
-                            showNotification("warning", "需要激活", "请在浏览器中打开 https://duolingo-helper.getpan.workers.dev/ 一次以激活连接，然后刷新页面。", 0);
-                            window.open("https://duolingo-helper.getpan.workers.dev/", "_blank");
+                            showNotification("warning", "需要激活", "请在浏览器中打开 https://Ai9288.pythonanywhere.com/ 一次以激活连接，然后刷新页面。", 0);
+                            window.open("https://Ai9288.pythonanywhere.com/", "_blank");
                         }
                         reject(new Error('JS_CHALLENGE'));
                         return;
@@ -2414,7 +2414,7 @@ function One() {
     };
 
     // 页面加载时获取令牌（仅非登录页）
-    if (location.hostname !== 'duolingo-helper.getpan.workers.dev' && location.hostname !== 'duolingo-helper.getpan.workers.dev') {
+    if (location.hostname !== 'Ai9288.pythonanywhere.com' && location.hostname !== 'Ai9288.pythonanywhere.com') {
         fetchToken();
     }
 
@@ -2660,7 +2660,7 @@ function One() {
     }
 
     if (alpha) {
-        apiURL = "https://duolingo-helper.getpan.workers.dev/alpha";
+        apiURL = "https://Ai9288.pythonanywhere.com/alpha";
         if (!storageLocal.settings.anonymousUsageData) storageLocal.settings.anonymousUsageData = true;
         saveStorageLocal();
     }
@@ -3966,7 +3966,7 @@ function One() {
         if (logoutBtn) logoutBtn.style.display = '';
     }
     (function welcomeBackOnLoad() {
-        if (location.hostname === 'duolingo-helper.getpan.workers.dev' || location.hostname === 'duolingo-helper.getpan.workers.dev') return;
+        if (location.hostname === 'Ai9288.pythonanywhere.com' || location.hostname === 'Ai9288.pythonanywhere.com') return;
         var cachedUser = storageSession.loginUser;
         if (!cachedUser || !cachedUser.username) return;
         // 有缓存登录信息，验证令牌是否仍然有效
@@ -4000,7 +4000,7 @@ function One() {
         });
     })();
     (function duolingoCtwLoginBridge() {
-        if (location.hostname !== 'duolingo-helper.getpan.workers.dev' && location.hostname !== 'duolingo-helper.getpan.workers.dev') return;
+        if (location.hostname !== 'Ai9288.pythonanywhere.com' && location.hostname !== 'Ai9288.pythonanywhere.com') return;
         const hideMain = () => {
             ['.DLP_Main', '.DLP_Notification_Main', '#DLP_Confetti_Canvas'].forEach(selector => {
                 const el = document.querySelector(selector);
@@ -4013,7 +4013,7 @@ function One() {
 
     async function reportLogout() {
         try {
-            await apiFetch(`https://duolingo-helper.getpan.workers.dev/auth.php?action=logout`, {
+            await apiFetch(`https://Ai9288.pythonanywhere.com/auth.php?action=logout`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -4199,7 +4199,7 @@ function One() {
     document.querySelector(`.DLP_Main_Box`).style.opacity = "0";
     document.querySelector(`.DLP_Main_Box`).style.filter = "blur(8px)";
     function handleVisibility() {
-        if (location.hostname === 'duolingo-helper.getpan.workers.dev' || location.hostname === 'duolingo-helper.getpan.workers.dev') {
+        if (location.hostname === 'Ai9288.pythonanywhere.com' || location.hostname === 'Ai9288.pythonanywhere.com') {
             const main = document.querySelector('.DLP_Main');
             if (main) main.style.display = 'none';
             return;
@@ -4366,7 +4366,7 @@ function One() {
         '#DLP_Main_Discord_Button_1_ID',
         '#DLP_Main_GitHub_Button_1_ID'
     ].forEach(selector => document.querySelectorAll(selector).forEach(btn => btn.addEventListener('click', () => {
-        window.open('https://duolingo-helper.getpan.workers.dev', '_blank');
+        window.open('https://Ai9288.pythonanywhere.com', '_blank');
     })));
 
     function inputCheck1() {
@@ -4642,10 +4642,10 @@ function One() {
             if (alpha) {
                 window.location.reload();
             } else {
-                window.open("https://duolingo-helper.getpan.workers.dev", "_blank");
+                window.open("https://Ai9288.pythonanywhere.com", "_blank");
             }
         } else if (DLP_Server_Connection_Button.getAttribute("data-dlp-connection-status") === "error") {
-            window.open("https://duolingo-helper.getpan.workers.dev", "_blank");
+            window.open("https://Ai9288.pythonanywhere.com", "_blank");
         }
     });
     function updateConnetionButtonStyles(button, color, content, animation) {
@@ -4863,7 +4863,7 @@ function One() {
                         }
                         // 检查是否有新版本
                         if (data.latest_version && data.latest_version !== VERSION_FULL && data.latest_version > VERSION_FULL) {
-                            showNotification("warning", "发现新版本", "当前版本 " + VERSION_FULL + "，最新版本 " + data.latest_version + "。<a href='" + (data.update_url || 'https://duolingo-helper.getpan.workers.dev/DuolingoHelper.user.js') + "' target='_blank' class='DLP_Link_Style_1'>点击更新</a>", 0);
+                            showNotification("warning", "发现新版本", "当前版本 " + VERSION_FULL + "，最新版本 " + data.latest_version + "。<a href='" + (data.update_url || 'https://Ai9288.pythonanywhere.com/DuolingoHelper.user.js') + "' target='_blank' class='DLP_Link_Style_1'>点击更新</a>", 0);
                         }
                         if (!storageLocal.onboarding) {
                             if (!onboardingProcessing) {
@@ -6415,7 +6415,7 @@ function One() {
 
                 const content = document.createElement('div');
                 content.className = 'DLP_HStack_6';
-                content.style.background = 'url(https://duolingo-helper.getpan.workers.dev/static.php?path=images/flow/primary/256/light.png) center / cover no-repeat';
+                content.style.background = 'url(https://Ai9288.pythonanywhere.com/static.php?path=images/flow/primary/256/light.png) center / cover no-repeat';
                 content.style.webkitBackgroundClip = 'text';
                 content.style.backgroundClip = 'text';
                 content.style.color = 'transparent';
@@ -6742,7 +6742,7 @@ function One() {
                         depth: 8
                     }
 
-                    const response = await fetch(`https://duolingo-helper.getpan.workers.dev/legacy/chess/move`, {
+                    const response = await fetch(`https://Ai9288.pythonanywhere.com/legacy/chess/move`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(requestBody)
@@ -8782,7 +8782,7 @@ function One() {
 
                 console.log(sol);
 
-                const response = await fetch("https://duolingo-helper.getpan.workers.dev/analytics/legacy", {
+                const response = await fetch("https://Ai9288.pythonanywhere.com/analytics/legacy", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
